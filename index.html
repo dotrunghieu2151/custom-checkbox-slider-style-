@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>custom Checkbox</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="../NhapFormVaIn/img/icon.jpg">
+    </head>
+    <body>
+        <form>
+            <h1>Example of dynamically real-time updated form</h1>
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" oninput="confirmFirstName.value = firstName.value">
+            </div>
+             <div>
+                 <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" oninput="confirmLastName.value = lastName.value">
+            </div>
+             <div>
+                <label for="userTel">Telephone</label>
+                <input type="number" id="userTel" name="userTel" oninput="confirmUserTel.value = userTel.value">
+            </div>
+            <label class="checkbox-label checkbox1">
+                <input type="checkbox" id="coding" name="skills" value="coding">
+                <span class="switch-checkbox"></span>
+                <span>hello</span>
+            </label>
+             <div class="checkbox-label">
+                <input type="checkbox" id="design" name="skills" value="design">
+                <div class="switch-checkbox"></div>
+                <label class="checkbox-label" for="design"><p>Design</p></label>
+            </div>
+             <div class="checkbox-label">
+                <input type="checkbox" id="develop" name="skills" value="develop">
+                <div class="switch-checkbox"></div>
+                <label class="checkbox-label" for="develop"><p>Develop</p></label>
+            </div>
+            <div class="confirmation">
+                <input type="text" id="confirmFirstName" readonly>
+                <input type="text" id="confirmLastName" readonly>
+                <input type="number" id="confirmUserTel" readonly>
+            </div>
+        </form>
+    </body>
+</html>
